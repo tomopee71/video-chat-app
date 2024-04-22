@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      const ROOM_ID = "<%= roomId %>";
+      console.log(ROOM_ID);
+    </script>
+    <script
+      src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"
+      defer
+    ></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">クスリのサンロード　オンライン投薬</h1>
+    </header>
+    <div class="main">
+      <div class="main__wrap">
+        <div id="video-wrap"></div>
+        <div class="video__controller">
+          <button type="button" class="btn__action" onclick="playStop(this)">
+            <img src="images/video.png" />
+          </button>
+          <button type="button" class="btn__action" onclick="nuteUnmute(this)">
+            <img src="images/mic.png" />
+          </button>
+          <button type="button" class="btn__action" onclick="leaveVideo(this)">
+            <img src="images/call.png" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
